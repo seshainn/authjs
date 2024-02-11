@@ -37,9 +37,9 @@ export const LoginForm = ({
   })
   const { errors } = formState
   const formSubmit = async (data: z.infer<typeof LoginSchema>) => {
-    console.log(data)
     const response = await addUser(data)
     console.log('response is ', response)
+    reset()
   }
   return (
     <Card className='w-3/4 max-w-xl text-center'>
